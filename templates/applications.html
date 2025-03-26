@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Applications</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for message in messages %}
+                    <div class="alert alert-info">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <h1>My Applications</h1>
+    
+    {% if applications %}
+        <table border="1">
+            <tr>
+                <th>Date</th>
+                <th>Full Name</th>
+                <th>Country</th>
+                <th>Passport</th>
+                <th>Visa Type</th>
+                <th>Document</th>
+            </tr>
+            {% for id, app in applications.items() %}
+            <tr>
+                <td>{{ app.submission_date }}</td>
+                <td>{{ app.full_name }}</td>
+                <td>{{ app.country }}</td>
+                <td>{{ app.passport }}</td>
+                <td>{{ app.visa_type }}</td>
+                <td>{{ app.filename }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No applications submitted yet.</p>
+    {% endif %}
+    
+    <p><a href="{{ url_for('form') }}">Submit New Application</a></p>
+</body>
+</html> 

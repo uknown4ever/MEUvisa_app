@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now | MEU VisaPass</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="navbar-section">
+            <div class="logo-wrapper">
+                <div class="logo"><a href="{{ url_for('main') }}"><img src="../static/img/logo-simple.png" alt="MEU VisaPass Logo"></a></div>
+                <a href="{{ url_for('main') }}"><h3 class="meu-visapass"><strong>MEU</strong> VisaPass</h3></a>
+            </div>
+            <div class="nav-links-wrapper">
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('login') }}" data-translate="getVisa">Get Visa</a></li>
+                    <li><a href="{{ url_for('main') }}#about-us" data-translate="aboutUs">About Us</a></li>
+                    <li>
+                        <select id="language-switcher">
+                            <option value="en">EN</option>
+                            <option value="fr">FR</option>
+                        </select>
+                    </li>
+                    <li><a href="{{ url_for('login') }}"><button class="cta-button">Log out</button></a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+    <!-- Apply for Your Visa -->
+    <section id="get-visa" class="apply-visa-section login-section">
+        <div class="container">
+            <h2 data-translate="applyForVisa">Apply for Your Visa</h2>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-info">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <form id="visaForm" action="{{ url_for('form') }}" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <div class="input-container">
+                        <label for="fullName" data-translate="fullName">Full name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="country" data-translate="countryOfOrigin">Country of origin</label>
+                        <select id="country" name="country" required>
+                            <option value="" disabled selected data-translate="selectCountry">
+                                Select your country
+                            </option>
+                            <option value="morocco">Morocco</option>
+                            <option value="spain">Spain</option>
+                            <option value="france">France</option>
+                            <option value="portugal">Portugal</option>
+                            <option value="algeria">Algeria</option>
+                            <option value="libya">Libya</option>
+                            <option value="tunisia">Tunisia</option>
+                            <option value="mauritania">Mauritania</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-container">
+                        <label for="passport" data-translate="passportNumber">Passport number</label>
+                        <input type="text" id="passport" name="passport" placeholder="Enter your passport number" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="visaType" data-translate="visaType">Visa type</label>
+                        <select id="visaType" name="visaType" required>
+                            <option value="" disabled selected data-translate="selectVisaType">
+                                Select your visa type
+                            </option>
+                            <option value="tourist" data-translate="touristVisa">Tourist</option>
+                            <option value="business" data-translate="businessVisa">Business</option>
+                            <option value="student" data-translate="studentVisa">Student</option>
+                            <option value="work" data-translate="workVisa">Work</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="upload-container">
+                    <label for="fileUpload" data-translate="uploadDocuments">Upload Documents</label>
+                    <div class="file-submit-wrapper">
+                        <div>
+                            <input type="file" id="fileUpload" name="uploadedFile" required>
+                            <label class="file-label" for="fileUpload" data-translate="chooseFile">
+                                <i class="fas fa-upload"></i> Choose file
+                            </label>
+                            <span class="file-name" id="fileName">No files selected</span>                       
+                        </div>
+                        <button type="submit" class="cta-button" data-translate="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 MEU VisaPass. <span data-translate="rightsReserved">All rights reserved</span>.</p>
+        </div>
+    </footer>
+ 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('JavaScript is running');
+
+            const fileUpload = document.getElementById('fileUpload');
+            const fileName = document.getElementById('fileName');
+
+            if (fileUpload && fileName) {
+                fileUpload.addEventListener('change', function () {
+                    if (this.files.length > 0) {
+                        fileName.textContent = this.files[0].name;
+                    } else {
+                        fileName.textContent = "No files selected";
+                    }
+                });
+            } else {
+                console.error('fileUpload or fileName not found in the DOM.');
+            }
+        });
+    </script>
+    <script src="../static/translations.js"></script>   
+    <script src="../static/form-validation.js"></script>
+</body>
+</html>

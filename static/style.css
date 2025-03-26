@@ -1,0 +1,1451 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  color: #152639;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.meu-visapass {
+  font-size: 18px;
+  font-weight: 600;
+  color: #152639;
+}
+
+.meu-visapass strong {
+  font-weight: bold;
+}
+
+.nav-links-wrapper {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #152639;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cta-button {
+    background: linear-gradient(to right, #e93d40, #f43a6f);
+    color: white;
+    border: none;
+    padding: 14px 26px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background: linear-gradient(to right, #f43a6f, #e93d40);
+    transform: translateY(-2px);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+.nav-links .cta-button {
+  padding: 8px 20px;
+}
+
+.hero-section {
+  background: url("./img/hero.jpg") no-repeat center center/cover;
+  color: white;
+  padding: 60px 0;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 43px;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.hero-content .cta-button {
+  padding: 16px 80px;
+  font-size: 20px;
+}
+
+.social-proof-seciton {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.stat img {
+  width: 85%;
+  cursor: null;
+}
+
+.stat h3 {
+  font-size: 26px;
+  margin-bottom: 5px;
+  color: #152639;
+  cursor: default;
+}
+
+.stat h5 {
+  font-size: 14px;
+  color: #152639;
+  font-weight: 400;
+}
+
+.why-choose-us-section {
+  display: flex;
+  padding: 60px 0;
+  gap: 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.left-section {
+  max-width: 45%;
+  flex: 1;
+}
+
+.left-section img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.left-section h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #152639;
+}
+
+.left-section p {
+  margin-bottom: 25px;
+  color: #152639;
+}
+
+.right-section {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.reason-wrapper {
+  background-color: #dcdfe7;
+  padding: 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #152639;
+}
+
+.reason-wrapper i {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.reason-wrapper strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.popular-destinations-section {
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.popular-destinations-section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #152639;
+}
+
+.popular-destinations-section > p {
+  color: #152639;
+  margin-bottom: 40px;
+}
+
+.destinations {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin-top: 40px;
+}
+
+.destination {
+  flex: 1;
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.destination-image {
+  position: relative;
+  width: 100%;
+}
+
+.destination-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+.destination-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(236, 3, 3, 0) 100%
+  );
+  padding: 25px 30px;
+  text-align: left;
+  color: white;
+}
+
+.destination-overlay h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.destination-overlay p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.apply-visa-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.apply-visa-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #152639;
+}
+
+#visaForm {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #152639;
+}
+
+input,
+select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 14px;
+  color: #152639;
+}
+
+.upload-container {
+  margin-bottom: 30px;
+}
+.file-submit-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.file-label {
+  background-color: #dcdfe7;
+  padding: 12px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  color: #152639;
+  display: inline-block;
+}
+
+.file-name {
+  color: rgb(70, 72, 77);
+  font-size: 14px;
+  font-family:"Poppins", sans-serif;
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .right-section {
+    grid-template-columns: 1fr; /* Stacks reasons vertically */
+  }
+
+  .destinations {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.destination-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Add this to contain the zoomed image */
+}
+
+.destination-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Add transition for smooth zoom */
+}
+
+.destination-image:hover img {
+  transform: scale(1.1); /* Add zoom effect on hover */
+}
+
+
+
+.destination-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(236, 3, 3, 0) 100%
+  );
+  padding: 25px 30px;
+  text-align: left;
+  color: white;
+}
+
+.destination-overlay h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.destination-overlay p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+/* login 
+
+/* Login Page Styles */
+/* Login Page Styles */
+.login-section {
+    min-height: 80vh;
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    background-image: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  }
+  
+  .login-form-container {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  .login-form-container h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  .form-group {
+    margin-bottom: 24px;
+    position: relative;
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  /* Align labels and inputs properly */
+  .form-group label {
+    display: flex;
+    margin-bottom: 12px;
+    margin-left: 4px;
+    font-weight: 500;
+    color: #1e1d1d;
+    font-size: 17px;
+    text-align: left;
+  }
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex; 
+    width: 100%; 
+    margin-bottom: 15px; 
+    border-radius: 20px;
+}
+
+
+  #visaType {
+    padding: 14px 16px;
+    border: 1px solid #a1a7af;
+    color: #444;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  #country {
+    padding: 14px 16px;
+    border: 1px solid #a1a7af;
+    color: #444;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+  .form-group input {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #a1a7af;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #4286f4;
+    box-shadow: 0 0 0 3px rgba(66, 134, 244, 0.15);
+  }
+  
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+  }
+  
+  .remember-me input {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  
+  .remember-me label {
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .forgot-password {
+    color: #4286f4;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .forgot-password:hover {
+    color: #2260cf;
+    text-decoration: underline;
+  }
+  
+  .login-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4286f4;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-sizing: border-box;
+  }
+  
+  .login-btn:hover {
+    background-color: #3a75d8;
+  }
+  
+  .login-btn:active {
+    transform: translateY(1px);
+  }
+  
+  .register-link {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    width: 100%;
+  }
+  
+  .terms {
+    display: flex;
+    align-items: center;
+  }
+
+  .terms a {
+    color: #4286f4;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    margin-left: 2px;
+  }
+
+  .terms a:hover {
+    color: #2260cf;
+    text-decoration: underline;
+  }
+
+  .terms input {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  .register-link p {
+    color: #666;
+    font-size: 15px;
+    margin: 0;
+  }
+  
+  .register-link a {
+    color: #4286f4;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    margin-left: 2px;
+
+  }
+  
+  .register-link a:hover {
+    color: #2260cf;
+    text-decoration: underline;
+  }
+  
+  /* Fix form width issues */
+  #login-form {
+    width: 100%;
+    display: block;
+  }
+  
+  /* CSS Reset for form elements */
+  form,
+  input,
+  button,
+  label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  
+  input,
+  button {
+    box-sizing: border-box;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust height as needed */
+    text-align: center;
+    background-color: #f8f9fa; /* Optional: Add a background color */
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Make the actual file input invisible but still clickable */
+input[type="file"] {
+    position: absolute;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap");}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  color: #152639;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.meu-visapass {
+  font-size: 18px;
+  font-weight: 600;
+  color: #152639;
+}
+
+.meu-visapass strong {
+  font-weight: bold;
+}
+
+.nav-links-wrapper {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #152639;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cta-button {
+    background: linear-gradient(to right, #e93d40, #f43a6f);
+    color: white;
+    border: none;
+    padding: 14px 26px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background: linear-gradient(to right, #f43a6f, #e93d40);
+    transform: translateY(-2px);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+.nav-links .cta-button {
+  padding: 8px 20px;
+}
+
+.hero-section {
+  background: url("./img/hero.jpg") no-repeat center center/cover;
+  color: white;
+  padding: 60px 0;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 43px;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.hero-content .cta-button {
+  padding: 16px 80px;
+  font-size: 20px;
+}
+
+.social-proof-seciton {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.stat img {
+  width: 85%;
+  cursor: null;
+}
+
+.stat h3 {
+  font-size: 26px;
+  margin-bottom: 5px;
+  color: #152639;
+  cursor: default;
+}
+
+.stat h5 {
+  font-size: 14px;
+  color: #152639;
+  font-weight: 400;
+}
+
+.why-choose-us-section {
+  display: flex;
+  padding: 60px 0;
+  gap: 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.left-section {
+  max-width: 45%;
+  flex: 1;
+}
+
+.left-section img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.left-section h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #152639;
+}
+
+.left-section p {
+  margin-bottom: 25px;
+  color: #152639;
+}
+
+.right-section {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.reason-wrapper {
+  background-color: #dcdfe7;
+  padding: 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #152639;
+}
+
+.reason-wrapper i {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.reason-wrapper strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.popular-destinations-section {
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.popular-destinations-section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #152639;
+}
+
+.popular-destinations-section > p {
+  color: #152639;
+  margin-bottom: 40px;
+}
+
+.destinations {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin-top: 40px;
+}
+
+.destination {
+  flex: 1;
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.destination-image {
+  position: relative;
+  width: 100%;
+}
+
+.destination-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+.destination-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(236, 3, 3, 0) 100%
+  );
+  padding: 25px 30px;
+  text-align: left;
+  color: white;
+}
+
+.destination-overlay h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.destination-overlay p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.apply-visa-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.apply-visa-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #152639;
+}
+
+#visaForm {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #152639;
+}
+
+input,
+select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 14px;
+  color: #152639;
+}
+
+.upload-container {
+  margin-bottom: 30px;
+}
+.file-submit-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.file-label {
+  background-color: #dcdfe7;
+  padding: 12px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  color: #152639;
+  display: inline-block;
+}
+
+.file-name {
+  color: rgb(70, 72, 77);
+  font-size: 14px;
+  font-family:"Poppins", sans-serif;
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .right-section {
+    grid-template-columns: 1fr; /* Stacks reasons vertically */
+  }
+
+  .destinations {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.destination-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Add this to contain the zoomed image */
+}
+
+.destination-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Add transition for smooth zoom */
+}
+
+.destination-image:hover img {
+  transform: scale(1.1); /* Add zoom effect on hover */
+}
+
+
+
+.destination-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(236, 3, 3, 0) 100%
+  );
+  padding: 25px 30px;
+  text-align: left;
+  color: white;
+}
+
+.destination-overlay h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.destination-overlay p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+/* login 
+
+/* Login Page Styles */
+/* Login Page Styles */
+.login-section {
+    min-height: 80vh;
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    background-image: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  }
+  
+  .login-form-container {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  .login-form-container h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  .form-group {
+    margin-bottom: 24px;
+    position: relative;
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  /* Align labels and inputs properly */
+  .form-group label {
+    display: flex;
+    margin-bottom: 12px;
+    margin-left: 4px;
+    font-weight: 500;
+    color: #1e1d1d;
+    font-size: 17px;
+    text-align: left;
+  }
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex; 
+    width: 100%; 
+    margin-bottom: 15px; 
+    border-radius: 20px;
+}
+
+
+  #visaType {
+    padding: 14px 16px;
+    border: 1px solid #a1a7af;
+    color: #444;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  #country {
+    padding: 14px 16px;
+    border: 1px solid #a1a7af;
+    color: #444;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+  .form-group input {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #a1a7af;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #4286f4;
+    box-shadow: 0 0 0 3px rgba(66, 134, 244, 0.15);
+  }
+  
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+  }
+  
+  .remember-me input {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  
+  .remember-me label {
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .forgot-password {
+    color: #4286f4;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .forgot-password:hover {
+    color: #2260cf;
+    text-decoration: underline;
+  }
+  
+  .login-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4286f4;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-sizing: border-box;
+  }
+  
+  .login-btn:hover {
+    background-color: #3a75d8;
+  }
+  
+  .login-btn:active {
+    transform: translateY(1px);
+  }
+  
+  .register-link {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    width: 100%;
+  }
+  
+  .terms {
+    display: flex;
+    align-items: center;
+  }
+
+  .terms a {
+    color: #4286f4;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    margin-left: 2px;
+  }
+
+  .terms a:hover {
+    color: #2260cf;
+    text-decoration: underline;
+  }
+
+  .terms input {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  .register-link p {
+    color: #666;
+    font-size: 15px;
+    margin: 0;
+  }
+  
+  .register-link a {
+    color: #4286f4;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    margin-left: 2px;
+
+  }
+  
+  .register-link a:hover {
+    color: #2260cf;
+    text-decoration: underline;
+  }
+  
+  /* Fix form width issues */
+  #login-form {
+    width: 100%;
+    display: block;
+  }
+  
+  /* CSS Reset for form elements */
+  form,
+  input,
+  button,
+  label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  
+  input,
+  button {
+    box-sizing: border-box;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust height as needed */
+    text-align: center;
+    background-color: #f8f9fa; /* Optional: Add a background color */
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Make the actual file input invisible but still clickable */
+input[type="file"] {
+    position: absolute;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Flash Message Styling */
+.alert {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Success Message Specific Styling */
+.alert-info {
+  background-color: #e6f3e6;
+  border-left: 6px solid #28a745;
+  color: #155724;
+}
+
+/* Alternative Success Message Style */
+.alert-success {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  background-color: #d4edda;
+  border-left: 6px solid #25b446;
+  color: #155724;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animated Success Message */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Error Message Styling */
+.alert-danger {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  background-color: #f8d7da;
+  border-left: 6px solid #dc3545;
+  color: #721c24;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Input Error Highlighting */
+.input-error {
+  border: 2px solid #dc3545 !important;
+}
+

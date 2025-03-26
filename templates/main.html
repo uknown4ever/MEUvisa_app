@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | MEU VisaPass</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="navbar-section">
+            <div class="logo-wrapper">
+                <div class="logo"><a href="{{ url_for('main') }}"><img src="../static/img/logo-simple.png"></a></div>
+                <a href="{{ url_for('main') }}"><h3 class="meu-visapass"><strong>MEU</strong> VisaPass</h3></a>
+            </div>
+            <div class="nav-links-wrapper">
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('login') }}" data-translate="getVisa">Get Visa</a></li>
+                    <li><a href="#about-us" data-translate="aboutUs">About Us</a></li>
+                    <li>
+                        <select id="language-switcher">
+                            <option value="en">EN</option>
+                            <option value="fr">FR</option>
+                        </select>
+                    </li>
+                    <li><a href="{{ url_for('login') }}"><button class="cta-button">Log in</button></a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="container">
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="alert alert-success">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-translate="heroTitle">The easiest way to get your travel visa</h1>
+                <p data-translate="heroSubtitle">Let us help you get your visa, so you can focus on your trip</p>
+                <a href="{{ url_for('login') }}" class="cta-button" data-translate="getStarted">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Social Proof -->
+        <section class="social-proof-seciton">
+            <div class="stat">
+                <h3>3.5M</h3>
+                <h5 data-translate="getStarted">happy customers</h5>
+            </div>
+            <div class="stat">
+                <h3>24/7</h3>
+                <h5 data-translate="support">support</h5>
+            </div>
+            <div class="stat">
+                <img src="../static/img/review-stars.png" alt="review">
+                <h5 data-translate="reviews">29,000+ reviews</h5>
+            </div>
+            <div class="stat">
+                <h3>10</h3>
+                <h5 data-translate="yearsOfExperience">years of experience</h5>
+            </div>
+            <div class="stat">
+                <h3>94%</h3>
+                <h5 data-translate="visaApprovalRate">visa approval rate</h5>
+            </div>
+        </section>
+
+<!-- Why Choose Us -->
+<section id="about-us" class="why-choose-us-section">
+    <div class="left-section">
+        <img src="../static/img/why-choose-us.jpg" alt="">
+        <h2 data-translate="whyChooseUsTitle">Why Choose Us?</h2>
+        <p data-translate="whyChooseUsSubtitle">Find out why we lead the travel document industry<br>
+            enabling travels to fly with ease</p>
+        <button class="cta-button"><a href="{{ url_for('login') }}" data-translate="applyNow">Apply Now</a></button>
+    </div>
+    <div class="right-section">
+        <div class="reason-wrapper">
+            <i class="fas fa-clock"></i> <strong data-translate="fastProcessing">Fast Processing:</strong> <span data-translate="fastProcessingText">Get your visa approved quickly.</span>
+        </div>
+        <div class="reason-wrapper">
+            <i class="fas fa-user-tie"></i> <strong data-translate="expertGuidance">Expert Guidance:</strong> <span data-translate="expertGuidanceText">Our team helps you at every step.</span>
+        </div>
+        <div class="reason-wrapper">
+            <i class="fas fa-lock"></i> <strong data-translate="secureReliable">Secure & Reliable:</strong> <span data-translate="secureReliableText">Your data is safe.</span>
+        </div>
+        <div class="reason-wrapper">
+            <i class="fas fa-headset"></i> <strong data-translate="support247">24/7 Support:</strong> <span data-translate="support247Text">Always available for you.</span>
+        </div>
+    </div>
+</section>
+
+<!-- Most Popular Destinations -->
+<section class="popular-destinations-section">
+    <h2 data-translate="popularDestinationsTitle">Most Popular Destinations</h2>
+    <p data-translate="popularDestinationsSubtitle">Check out our customers' most frequented travel destinations</p>
+    <div class="destinations">
+        <div class="destination">
+            <div class="destination-image">
+              <img src="../static/img/morocco.jpg" alt="Morocco">
+              <div class="destination-overlay">
+                <h3 data-translate="morocco">Morocco</h3>
+                <p><span>208,000+</span> <span data-translate="processedVisas">processed Visas</span></p>
+              </div>
+            </div>
+        </div>
+        <div class="destination">
+            <div class="destination-image">
+              <img src="../static/img/france.jpg" alt="France">
+              <div class="destination-overlay">
+                <h3 data-translate="france">France</h3>
+                <p><span>180,000+</span> <span data-translate="processedVisas">processed Visas</span></p>
+              </div>
+            </div>
+        </div>
+        <div class="destination">
+            <div class="destination-image">
+              <img src="../static/img/spain.jpg" alt="Spain">
+              <div class="destination-overlay">
+                <h3 data-translate="spain">Spain</h3>
+                <p><span>141,000+</span> <span data-translate="processedVisas">processed Visas</span></p>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<script src="../static/translations.js"></script>
+</body>
+</html>

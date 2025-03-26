@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Create a MEU VisaPass account to start your visa application process and manage your travel documents."
+    />
+    <title>Register | MEU VisaPass</title>
+    <link rel="stylesheet" href="../static/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="navbar-section">
+        <div class="logo-wrapper">
+          <div class="logo">
+            <a href="main.html"
+              ><img src="../static/img/logo-simple.png" alt="MEU VisaPass Logo"
+            /></a>
+          </div>
+          <a href="main.html"
+            ><h3 class="meu-visapass"><strong>MEU</strong> VisaPass</h3></a
+          >
+        </div>
+        <div class="nav-links-wrapper">
+          <ul class="nav-links">
+            <li><a href="login.html" data-translate="getVisa">Get Visa</a></li>
+            <li>
+              <a href="main.html#about-us" data-translate="aboutUs">About Us</a>
+            </li>
+            <li>
+              <select id="language-switcher">
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+              </select>
+            </li>
+            <li>
+              <a href="login.html"
+                ><button class="cta-button">Log in</button></a
+              >
+            </li>
+          </ul>
+        </div>
+      </header>
+    </div>
+
+    <!-- Register Section -->
+    <main>
+      <section class="login-section">
+        <div class="container">
+          <div class="login-form-container">
+            <h2>Create an Account</h2>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                {% for category, message in messages %}
+                  <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+            <form
+              id="register-form"
+              action="{{ url_for('register') }}"
+              method="POST"
+            >
+              <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+              </div>
+              <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirm-password"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="cta-button login-btn"
+                data-translate="registerButton"
+              >
+                Register
+              </button>
+            </form>
+            <div class="register-link">
+              <p>
+                Already have an account?
+                <a href="{{ url_for('login') }}" data-translate="loginNow"
+                  >Login here</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2025 MEU VisaPass.
+          <span data-translate="rightsReserved">All rights reserved</span>.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../static/translations.js"></script>
+  </body>
+</html>
